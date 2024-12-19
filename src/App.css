@@ -1,0 +1,159 @@
+:root {
+  --hex-size: 10rem;
+  --hex-gap: 0.5rem;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  padding: 2rem;
+}
+
+.hex-row {
+  display: flex;
+}
+
+.hex-wrapper {
+  position: relative;
+  width: var(--hex-size);
+  aspect-ratio: 0.866/1;
+  margin: -1.3rem var(--hex-gap); /* Move margin from .hex to wrapper */
+}
+
+.hex-border {
+  position: absolute;
+  inset: -5px; /* Shorthand for top/right/bottom/left: 0 */
+  background: black;
+  clip-path: polygon(
+    50% 0%,
+    100% 28.87%,
+    100% 71.13%,
+    50% 100%,
+    0% 71.13%,
+    0% 28.87%
+  );
+}
+
+.hex-border.wood {
+  background: rgb(21 128 61);
+}
+
+.hex-border.brick {
+  background: rgb(248 113 113);
+}
+
+.hex-border.sheep {
+  background: rgb(74 222 128);
+}
+
+.hex-border.wheat {
+  background: rgb(253 230 138);
+}
+
+.hex-border.stone {
+  background: rgb(156 163 175);
+}
+
+.hex-border.desert {
+  background: #e6c34c;
+}
+
+.hex {
+  position: absolute;
+  width: var(--hex-size);
+  aspect-ratio: 0.866/1;
+
+  inset: 0;
+  /* clip-path: polygon(
+    50% 0%,
+    100% 43.3%,
+    100% 56.7%,
+    50% 100%,
+    0% 56.7%,
+    0% 43.3%
+  ); */
+  /* clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); */
+  clip-path: polygon(
+    50% 0%,
+    100% 28.87%,
+    100% 71.13%,
+    50% 100%,
+    0% 71.13%,
+    0% 28.87%
+  );
+
+  /* box-shadow: 0 0 0 5px black; */
+  /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); */
+  /* background-size: cover; */
+  background-size: 1500%;
+  background-position: center 40%;
+  /* background-blend-mode: multiply; */
+  /* background-blend-mode: soft-light; */
+  /* background-blend-mode: overlay; */
+  /* background-blend-mode: multiply; */
+  /* background-blend-mode: multiply; */
+  pointer-events: visiblePainted;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.roll-number {
+  font-size: 1rem;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  padding: 1rem;
+  width: 0.6rem;
+  height: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5rem;
+}
+
+.roll-number.critical {
+  background-color: red;
+  color: white;
+}
+
+.hex:hover {
+  /* background-blend-mode: normal; */
+  background-size: 1540%;
+}
+
+.hex-row.offset .hex {
+  transform: translateX(calc(var(--hex-size) / 2));
+}
+
+.hex.wood {
+  background-color: rgb(21 128 61);
+  background-image: url("./assets/catan-trees.jpg");
+}
+
+.hex.sheep {
+  background-color: rgb(74 222 128);
+  background-image: url("./assets/catan-sheep.jpg");
+}
+
+.hex.stone {
+  background-color: rgb(156 163 175);
+  background-image: url("./assets/catan-mountains.jpg");
+}
+
+.hex.desert {
+  background-color: #e6c34c;
+  background-image: url("./assets/catan-desert.jpg");
+}
+
+.hex.brick {
+  background-color: rgb(248 113 113);
+  background-image: url("./assets/catan-brick.jpg");
+}
+
+.hex.wheat {
+  background-color: rgb(253 230 138);
+  background-image: url("./assets/catan-wheat.jpg");
+}
