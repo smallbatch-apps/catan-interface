@@ -1,0 +1,2295 @@
+[
+  {
+    "type": "constructor",
+    "inputs": [
+      {
+        "name": "resources",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "MAX_CITIES_PER_PLAYER",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint8",
+        "internalType": "uint8"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "MAX_PLAYERS",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint8",
+        "internalType": "uint8"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "MAX_ROADS_PER_PLAYER",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint8",
+        "internalType": "uint8"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "MAX_SETTLEMENTS_PER_PLAYER",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint8",
+        "internalType": "uint8"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "_testPlaceCity",
+    "inputs": [
+      {
+        "name": "nodeId",
+        "type": "bytes1",
+        "internalType": "bytes1"
+      },
+      {
+        "name": "player",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "_testPlaceRoad",
+    "inputs": [
+      {
+        "name": "roadId",
+        "type": "bytes2",
+        "internalType": "bytes2"
+      },
+      {
+        "name": "player",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "_testPlaceSettlement",
+    "inputs": [
+      {
+        "name": "nodeId",
+        "type": "bytes1",
+        "internalType": "bytes1"
+      },
+      {
+        "name": "player",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "acceptTrade",
+    "inputs": [
+      {
+        "name": "tradeId",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "activateRobber",
+    "inputs": [],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "armySize",
+    "inputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint8",
+        "internalType": "uint8"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "assignCriticalRolls",
+    "inputs": [],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "assignNonCriticalRolls",
+    "inputs": [],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "assignResources",
+    "inputs": [],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "assignResourcesOnRoll",
+    "inputs": [
+      {
+        "name": "roll",
+        "type": "uint8",
+        "internalType": "uint8"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "boardStatus",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint8",
+        "internalType": "enum Board.BoardStatus"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "checkAdjacency",
+    "inputs": [
+      {
+        "name": "hexId1",
+        "type": "bytes6",
+        "internalType": "bytes6"
+      },
+      {
+        "name": "hexId2",
+        "type": "bytes6",
+        "internalType": "bytes6"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "stateMutability": "pure"
+  },
+  {
+    "type": "function",
+    "name": "checkCityIsSettlement",
+    "inputs": [
+      {
+        "name": "nodeId",
+        "type": "bytes1",
+        "internalType": "bytes1"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "checkForRobbedPlayers",
+    "inputs": [],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "checkPlayerHasCitiesAvailable",
+    "inputs": [
+      {
+        "name": "playerAddress",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "checkPlayerHasResourcesForCard",
+    "inputs": [
+      {
+        "name": "player",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "checkPlayerHasResourcesForCity",
+    "inputs": [
+      {
+        "name": "player",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "checkPlayerHasResourcesForRoad",
+    "inputs": [
+      {
+        "name": "player",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "checkPlayerHasResourcesForSettlement",
+    "inputs": [
+      {
+        "name": "player",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "checkPlayerHasRoadsAvailable",
+    "inputs": [
+      {
+        "name": "playerAddress",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "checkPlayerHasSettlementsAvailable",
+    "inputs": [
+      {
+        "name": "playerAddress",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "checkRoadIsAvailable",
+    "inputs": [
+      {
+        "name": "roadId",
+        "type": "bytes2",
+        "internalType": "bytes2"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "checkRoadIsValid",
+    "inputs": [
+      {
+        "name": "roadId",
+        "type": "bytes2",
+        "internalType": "bytes2"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "checkRoadOriginIsPlayerOwned",
+    "inputs": [
+      {
+        "name": "roadId",
+        "type": "bytes2",
+        "internalType": "bytes2"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "checkSettlementIsAvailable",
+    "inputs": [
+      {
+        "name": "nodeId",
+        "type": "bytes1",
+        "internalType": "bytes1"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "checkSettlementIsNotTooClose",
+    "inputs": [
+      {
+        "name": "nodeId",
+        "type": "bytes1",
+        "internalType": "bytes1"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "checkSettlementIsValid",
+    "inputs": [
+      {
+        "name": "nodeId",
+        "type": "bytes1",
+        "internalType": "bytes1"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "stateMutability": "pure"
+  },
+  {
+    "type": "function",
+    "name": "checkSettlementOnRoad",
+    "inputs": [
+      {
+        "name": "nodeId",
+        "type": "bytes1",
+        "internalType": "bytes1"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "chooseRobberTarget",
+    "inputs": [
+      {
+        "name": "target",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "chooseStartingPlayer",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "currentPlayer",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "currentPlayerHasRolled",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "currentPlayerTurn",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint8",
+        "internalType": "uint8"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "currentSetupPlayer",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint8",
+        "internalType": "uint8"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "desertHexId",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes6",
+        "internalType": "bytes6"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "developmentCards",
+    "inputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint8",
+        "internalType": "enum Board.DevelopmentCardType"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "discardResources",
+    "inputs": [
+      {
+        "name": "resources",
+        "type": "bytes5",
+        "internalType": "bytes5"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "drawCard",
+    "inputs": [],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "endTurn",
+    "inputs": [],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "finishInitalPlacement",
+    "inputs": [],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "freeRoads",
+    "inputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "gameReady",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "generateHarbors",
+    "inputs": [],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "generateRolls",
+    "inputs": [],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "generateTerrainDistribution",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint8[]",
+        "internalType": "enum Resources.ResourceTypes[]"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getAllHarbors",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "tuple[]",
+        "internalType": "struct Board.Harbor[]",
+        "components": [
+          {
+            "name": "roadId",
+            "type": "bytes2",
+            "internalType": "bytes2"
+          },
+          {
+            "name": "harborType",
+            "type": "uint8",
+            "internalType": "enum Board.HarborType"
+          }
+        ]
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getAllHexes",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "tuple[]",
+        "internalType": "struct Board.Hex[]",
+        "components": [
+          {
+            "name": "resourceType",
+            "type": "uint8",
+            "internalType": "enum Resources.ResourceTypes"
+          },
+          {
+            "name": "hasRobber",
+            "type": "bool",
+            "internalType": "bool"
+          },
+          {
+            "name": "roll",
+            "type": "uint8",
+            "internalType": "uint8"
+          }
+        ]
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getAllNodes",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "tuple[]",
+        "internalType": "struct Board.Node[]",
+        "components": [
+          {
+            "name": "playerAddress",
+            "type": "address",
+            "internalType": "address"
+          },
+          {
+            "name": "status",
+            "type": "uint8",
+            "internalType": "enum Board.NodeStatus"
+          },
+          {
+            "name": "connections",
+            "type": "bytes3",
+            "internalType": "bytes3"
+          }
+        ]
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getAllRoads",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "tuple[]",
+        "internalType": "struct Board.Road[]",
+        "components": [
+          {
+            "name": "id",
+            "type": "bytes2",
+            "internalType": "bytes2"
+          },
+          {
+            "name": "owner",
+            "type": "address",
+            "internalType": "address"
+          }
+        ]
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getHex",
+    "inputs": [
+      {
+        "name": "hexId",
+        "type": "bytes6",
+        "internalType": "bytes6"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "tuple",
+        "internalType": "struct Board.Hex",
+        "components": [
+          {
+            "name": "resourceType",
+            "type": "uint8",
+            "internalType": "enum Resources.ResourceTypes"
+          },
+          {
+            "name": "hasRobber",
+            "type": "bool",
+            "internalType": "bool"
+          },
+          {
+            "name": "roll",
+            "type": "uint8",
+            "internalType": "uint8"
+          }
+        ]
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getHexesForNode",
+    "inputs": [
+      {
+        "name": "nodeId",
+        "type": "bytes1",
+        "internalType": "bytes1"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes6[]",
+        "internalType": "bytes6[]"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getPlayers",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "tuple[]",
+        "internalType": "struct Board.Player[]",
+        "components": [
+          {
+            "name": "name",
+            "type": "bytes32",
+            "internalType": "bytes32"
+          },
+          {
+            "name": "ethAddress",
+            "type": "address",
+            "internalType": "address"
+          },
+          {
+            "name": "colour",
+            "type": "uint8",
+            "internalType": "enum Board.Colours"
+          },
+          {
+            "name": "victoryPoints",
+            "type": "uint8",
+            "internalType": "uint8"
+          },
+          {
+            "name": "roadCount",
+            "type": "uint8",
+            "internalType": "uint8"
+          },
+          {
+            "name": "settlementCount",
+            "type": "uint8",
+            "internalType": "uint8"
+          },
+          {
+            "name": "cityCount",
+            "type": "uint8",
+            "internalType": "uint8"
+          }
+        ]
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getResourcesForHex",
+    "inputs": [
+      {
+        "name": "hexId",
+        "type": "bytes6",
+        "internalType": "bytes6"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "playerFound",
+        "type": "address[]",
+        "internalType": "address[]"
+      },
+      {
+        "name": "counts",
+        "type": "uint8[]",
+        "internalType": "uint8[]"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getRoll",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "die1",
+        "type": "uint8",
+        "internalType": "uint8"
+      },
+      {
+        "name": "die2",
+        "type": "uint8",
+        "internalType": "uint8"
+      },
+      {
+        "name": "total",
+        "type": "uint8",
+        "internalType": "uint8"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "harborEdges",
+    "inputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes2",
+        "internalType": "bytes2"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "hasHarbor",
+    "inputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "",
+        "type": "uint8",
+        "internalType": "enum Board.HarborType"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "hexIds",
+    "inputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes6",
+        "internalType": "bytes6"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "hexes",
+    "inputs": [
+      {
+        "name": "",
+        "type": "bytes6",
+        "internalType": "bytes6"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "resourceType",
+        "type": "uint8",
+        "internalType": "enum Resources.ResourceTypes"
+      },
+      {
+        "name": "hasRobber",
+        "type": "bool",
+        "internalType": "bool"
+      },
+      {
+        "name": "roll",
+        "type": "uint8",
+        "internalType": "uint8"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "isCurrentPlayerTurn",
+    "inputs": [
+      {
+        "name": "player",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "isPlayer",
+    "inputs": [
+      {
+        "name": "player",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "joinPlayer",
+    "inputs": [
+      {
+        "name": "name",
+        "type": "bytes32",
+        "internalType": "bytes32"
+      },
+      {
+        "name": "colour",
+        "type": "uint8",
+        "internalType": "enum Board.Colours"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "largestArmyPlayer",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "largestArmySize",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint8",
+        "internalType": "uint8"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "lastRoll",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint8",
+        "internalType": "uint8"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "longestRoadLength",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint8",
+        "internalType": "uint8"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "longestRoadPlayer",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "moveRobber",
+    "inputs": [
+      {
+        "name": "hexId",
+        "type": "bytes6",
+        "internalType": "bytes6"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "nodeHarborType",
+    "inputs": [
+      {
+        "name": "",
+        "type": "bytes1",
+        "internalType": "bytes1"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint8",
+        "internalType": "enum Board.HarborType"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "nodeHasRobber",
+    "inputs": [
+      {
+        "name": "",
+        "type": "bytes1",
+        "internalType": "bytes1"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "nodes",
+    "inputs": [
+      {
+        "name": "",
+        "type": "bytes1",
+        "internalType": "bytes1"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "playerAddress",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "status",
+        "type": "uint8",
+        "internalType": "enum Board.NodeStatus"
+      },
+      {
+        "name": "connections",
+        "type": "bytes3",
+        "internalType": "bytes3"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "owner",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "pickRandomResource",
+    "inputs": [
+      {
+        "name": "player",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint8",
+        "internalType": "enum Resources.ResourceTypes"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "placeCity",
+    "inputs": [
+      {
+        "name": "nodeId",
+        "type": "bytes1",
+        "internalType": "bytes1"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "placeRoad",
+    "inputs": [
+      {
+        "name": "roadId",
+        "type": "bytes2",
+        "internalType": "bytes2"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "placeSettlement",
+    "inputs": [
+      {
+        "name": "nodeId",
+        "type": "bytes1",
+        "internalType": "bytes1"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "placedRoads",
+    "inputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes2",
+        "internalType": "bytes2"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "playKnightCard",
+    "inputs": [],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "playMonopolyCard",
+    "inputs": [
+      {
+        "name": "resourceType",
+        "type": "uint8",
+        "internalType": "enum Resources.ResourceTypes"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "playRoadBuildingCard",
+    "inputs": [],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "playYearOfPlentyCard",
+    "inputs": [
+      {
+        "name": "requestedResources",
+        "type": "bytes5",
+        "internalType": "bytes5"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "playerAddresses",
+    "inputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "playerPaths",
+    "inputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes1",
+        "internalType": "bytes1"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "playerRollsDice",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "total",
+        "type": "uint8",
+        "internalType": "uint8"
+      },
+      {
+        "name": "die1",
+        "type": "uint8",
+        "internalType": "uint8"
+      },
+      {
+        "name": "die2",
+        "type": "uint8",
+        "internalType": "uint8"
+      }
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "players",
+    "inputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "name",
+        "type": "bytes32",
+        "internalType": "bytes32"
+      },
+      {
+        "name": "ethAddress",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "colour",
+        "type": "uint8",
+        "internalType": "enum Board.Colours"
+      },
+      {
+        "name": "victoryPoints",
+        "type": "uint8",
+        "internalType": "uint8"
+      },
+      {
+        "name": "roadCount",
+        "type": "uint8",
+        "internalType": "uint8"
+      },
+      {
+        "name": "settlementCount",
+        "type": "uint8",
+        "internalType": "uint8"
+      },
+      {
+        "name": "cityCount",
+        "type": "uint8",
+        "internalType": "uint8"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "rejectTrade",
+    "inputs": [
+      {
+        "name": "tradeId",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "removeCardFromPlayer",
+    "inputs": [
+      {
+        "name": "cardType",
+        "type": "uint8",
+        "internalType": "enum Board.DevelopmentCardType"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "renounceOwnership",
+    "inputs": [],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "requestTrade",
+    "inputs": [
+      {
+        "name": "requestedPlayers",
+        "type": "address[]",
+        "internalType": "address[]"
+      },
+      {
+        "name": "offers",
+        "type": "bytes5",
+        "internalType": "bytes5"
+      },
+      {
+        "name": "requests",
+        "type": "bytes5",
+        "internalType": "bytes5"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "resetRobber",
+    "inputs": [],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "roads",
+    "inputs": [
+      {
+        "name": "",
+        "type": "bytes2",
+        "internalType": "bytes2"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "robber",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "active",
+        "type": "bool",
+        "internalType": "bool"
+      },
+      {
+        "name": "turnInitiated",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "needsMovement",
+        "type": "bool",
+        "internalType": "bool"
+      },
+      {
+        "name": "needsStealTarget",
+        "type": "bool",
+        "internalType": "bool"
+      },
+      {
+        "name": "currentPosition",
+        "type": "bytes6",
+        "internalType": "bytes6"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "rollSingleDice",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint8",
+        "internalType": "uint8"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "rollToHexes",
+    "inputs": [
+      {
+        "name": "",
+        "type": "uint8",
+        "internalType": "uint8"
+      },
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes6",
+        "internalType": "bytes6"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "rollTwoDice",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "total",
+        "type": "uint8",
+        "internalType": "uint8"
+      },
+      {
+        "name": "die1",
+        "type": "uint8",
+        "internalType": "uint8"
+      },
+      {
+        "name": "die2",
+        "type": "uint8",
+        "internalType": "uint8"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "selectStartingPlayer",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "startGame",
+    "inputs": [],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "testWinConditions",
+    "inputs": [],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "tradeResourcesWithBank",
+    "inputs": [
+      {
+        "name": "fromPlayer",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "resourcesFrom",
+        "type": "bytes5",
+        "internalType": "bytes5"
+      },
+      {
+        "name": "resourcesRequired",
+        "type": "bytes5",
+        "internalType": "bytes5"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "trades",
+    "inputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "proposer",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "recipient",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "offers",
+        "type": "bytes5",
+        "internalType": "bytes5"
+      },
+      {
+        "name": "requests",
+        "type": "bytes5",
+        "internalType": "bytes5"
+      },
+      {
+        "name": "status",
+        "type": "uint8",
+        "internalType": "enum Board.TradeStatus"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "transferOwnership",
+    "inputs": [
+      {
+        "name": "newOwner",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "turnCount",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint8",
+        "internalType": "uint8"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "unpackConnections",
+    "inputs": [
+      {
+        "name": "packed",
+        "type": "bytes3",
+        "internalType": "bytes3"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes1[]",
+        "internalType": "bytes1[]"
+      }
+    ],
+    "stateMutability": "pure"
+  },
+  {
+    "type": "function",
+    "name": "unpackHexNodes",
+    "inputs": [
+      {
+        "name": "hexId",
+        "type": "bytes6",
+        "internalType": "bytes6"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes1[6]",
+        "internalType": "bytes1[6]"
+      }
+    ],
+    "stateMutability": "pure"
+  },
+  {
+    "type": "function",
+    "name": "updateLongestRoad",
+    "inputs": [],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "event",
+    "name": "CityPlaced",
+    "inputs": [
+      {
+        "name": "nodeId",
+        "type": "bytes1",
+        "indexed": false,
+        "internalType": "bytes1"
+      },
+      {
+        "name": "player",
+        "type": "address",
+        "indexed": false,
+        "internalType": "address"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "DiceRolled",
+    "inputs": [
+      {
+        "name": "roll",
+        "type": "uint8",
+        "indexed": false,
+        "internalType": "uint8"
+      },
+      {
+        "name": "die1",
+        "type": "uint8",
+        "indexed": false,
+        "internalType": "uint8"
+      },
+      {
+        "name": "die2",
+        "type": "uint8",
+        "indexed": false,
+        "internalType": "uint8"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "GameStatusChanged",
+    "inputs": [
+      {
+        "name": "newStatus",
+        "type": "uint8",
+        "indexed": false,
+        "internalType": "enum Board.BoardStatus"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "GameWinner",
+    "inputs": [
+      {
+        "name": "player",
+        "type": "address",
+        "indexed": false,
+        "internalType": "address"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "MonopolyCardPlayed",
+    "inputs": [
+      {
+        "name": "player",
+        "type": "address",
+        "indexed": false,
+        "internalType": "address"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "OwnershipTransferred",
+    "inputs": [
+      {
+        "name": "previousOwner",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "newOwner",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "PlayerJoined",
+    "inputs": [],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "PlayerMustMoveRobber",
+    "inputs": [
+      {
+        "name": "player",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "PlayerRobbed",
+    "inputs": [
+      {
+        "name": "player",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "excessResources",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "ResourcesFromBank",
+    "inputs": [
+      {
+        "name": "player",
+        "type": "address",
+        "indexed": false,
+        "internalType": "address"
+      },
+      {
+        "name": "resources",
+        "type": "bytes5",
+        "indexed": false,
+        "internalType": "bytes5"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "ResourcesGranted",
+    "inputs": [
+      {
+        "name": "player",
+        "type": "address",
+        "indexed": false,
+        "internalType": "address"
+      },
+      {
+        "name": "resource",
+        "type": "uint8",
+        "indexed": false,
+        "internalType": "enum Resources.ResourceTypes"
+      },
+      {
+        "name": "amount",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "ResourcesPlayerToPlayer",
+    "inputs": [
+      {
+        "name": "playerFrom",
+        "type": "address",
+        "indexed": false,
+        "internalType": "address"
+      },
+      {
+        "name": "playerTo",
+        "type": "address",
+        "indexed": false,
+        "internalType": "address"
+      },
+      {
+        "name": "resources",
+        "type": "bytes5",
+        "indexed": false,
+        "internalType": "bytes5"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "ResourcesToBank",
+    "inputs": [
+      {
+        "name": "player",
+        "type": "address",
+        "indexed": false,
+        "internalType": "address"
+      },
+      {
+        "name": "resources",
+        "type": "bytes5",
+        "indexed": false,
+        "internalType": "bytes5"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "RoadPlaced",
+    "inputs": [
+      {
+        "name": "roadId",
+        "type": "bytes2",
+        "indexed": false,
+        "internalType": "bytes2"
+      },
+      {
+        "name": "player",
+        "type": "address",
+        "indexed": false,
+        "internalType": "address"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "RobberMoved",
+    "inputs": [
+      {
+        "name": "hexId",
+        "type": "bytes6",
+        "indexed": false,
+        "internalType": "bytes6"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "RobberRolled",
+    "inputs": [],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "RobberStealTarget",
+    "inputs": [
+      {
+        "name": "player",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "validTargets",
+        "type": "address[]",
+        "indexed": false,
+        "internalType": "address[]"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "SettlementPlaced",
+    "inputs": [
+      {
+        "name": "nodeId",
+        "type": "bytes1",
+        "indexed": false,
+        "internalType": "bytes1"
+      },
+      {
+        "name": "player",
+        "type": "address",
+        "indexed": false,
+        "internalType": "address"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "TradeAccepted",
+    "inputs": [
+      {
+        "name": "fromPlayer",
+        "type": "address",
+        "indexed": false,
+        "internalType": "address"
+      },
+      {
+        "name": "toPlayer",
+        "type": "address",
+        "indexed": false,
+        "internalType": "address"
+      },
+      {
+        "name": "offers",
+        "type": "bytes5",
+        "indexed": false,
+        "internalType": "bytes5"
+      },
+      {
+        "name": "requests",
+        "type": "bytes5",
+        "indexed": false,
+        "internalType": "bytes5"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "TradeRejected",
+    "inputs": [
+      {
+        "name": "tradeId",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "TradeRequested",
+    "inputs": [
+      {
+        "name": "player",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "offers",
+        "type": "bytes5",
+        "indexed": false,
+        "internalType": "bytes5"
+      },
+      {
+        "name": "requests",
+        "type": "bytes5",
+        "indexed": false,
+        "internalType": "bytes5"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "TurnStarted",
+    "inputs": [
+      {
+        "name": "player",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "YearOfPlentyCardPlayed",
+    "inputs": [
+      {
+        "name": "player",
+        "type": "address",
+        "indexed": false,
+        "internalType": "address"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "error",
+    "name": "OwnableInvalidOwner",
+    "inputs": [
+      {
+        "name": "owner",
+        "type": "address",
+        "internalType": "address"
+      }
+    ]
+  },
+  {
+    "type": "error",
+    "name": "OwnableUnauthorizedAccount",
+    "inputs": [
+      {
+        "name": "account",
+        "type": "address",
+        "internalType": "address"
+      }
+    ]
+  }
+]
